@@ -1,0 +1,73 @@
+/* Container pinned at bottom-right */
+.chat-popup-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Floating toggle button */
+.chat-toggle-btn {
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.chat-toggle-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.9);
+}
+
+/* Popup box with dark coder theme */
+.chat-box {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 12px;
+  width: 280px;
+  box-shadow: 0 0 18px rgba(0, 255, 200, 0.4);
+  text-align: center;
+  font-family: "Fira Code", monospace;
+}
+
+.chat-box h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #00ffcc;
+}
+
+.chat-box p {
+  font-size: 14px;
+  color: #c9d1d9;
+  margin: 8px 0 14px;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: #8b949e;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 12px #00ffcc;
+}

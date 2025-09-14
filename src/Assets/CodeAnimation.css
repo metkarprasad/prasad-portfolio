@@ -1,0 +1,37 @@
+/* CodeAnimation.css */
+.code-animation {
+  width: 50%;
+  height: 400px; /* adjust height as needed */
+  overflow-y: hidden; /* hide scrollbars */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: lime; /* classic hacker green */
+  line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* makes lines start from bottom */
+  padding: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+
+.code-animation p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

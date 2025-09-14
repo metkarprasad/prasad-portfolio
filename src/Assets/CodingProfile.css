@@ -1,0 +1,96 @@
+.profiles-section {
+  width: 100%;
+  background: #0a0f1f;
+  /* padding: 20px 30px;  */
+  /* smaller top/bottom padding to remove extra space */
+  margin: 0; /* remove any default margin */
+  color: #fff;
+  text-align: center;
+  font-family: "Fira Code", monospace; 
+}
+
+.profiles-title {
+  font-size: 32px; /* slightly bigger title */
+  font-weight: bold;
+  margin-top: 0;   /* remove extra top space */
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #00ffd1, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profiles-sub {
+  font-size: 15px; /* slightly bigger subtitle */
+  color: #9aa4b2;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.profiles-wrapper {
+  width: 100%;
+  overflow: hidden; /* hide overflow */
+  position: relative;
+}
+
+.profiles-track {
+  display: flex;
+  gap: 25px; /* slightly bigger gap between cards */
+  width: max-content;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* seamless scroll */
+}
+
+.profile-card {
+  flex: 0 0 320px; /* bigger width */
+  background: #11182e;
+  border-radius: 16px; /* slightly bigger border radius */
+  padding: 25px;       /* bigger padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  background: #141c36;
+  transform: scale(1.12); /* slightly bigger scale */
+  box-shadow: 0 0 35px #00ffd1;
+}
+
+.card-logo { 
+  font-size: 50px; /* bigger icon */
+  color: #00ffd1; 
+  margin-bottom: 15px; 
+}
+
+.card-body h3 { 
+  font-size: 20px; /* bigger title */
+  font-weight: bold; 
+}
+
+.card-body .desc { 
+  font-size: 14px; 
+  color: #9aa4b2; 
+  margin: 6px 0; 
+}
+
+.card-body .highlight { 
+  font-size: 14px; 
+  color: #fff; 
+  font-style: italic; 
+}
+
+.card-body .score { 
+  margin-top: 12px; 
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #00ffd1; 
+}

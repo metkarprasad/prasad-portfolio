@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import "../Assets/Navbar.css"
+import "../Assets/Navbar.css";
 
-export default function NeoBar() {
+export default function NeoBar({ onNavClick }) {
   const [open, setOpen] = useState(false);
-  const navItems = ["Home", "About", "Projects", "Skills", "Contact"];
+  const navItems = ["Home", "About", "Projects", "Code", "Skills", "Contact"];
 
   return (
     <nav className="neobar">
@@ -29,6 +29,7 @@ export default function NeoBar() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
+              onClick={() => onNavClick(item.toLowerCase())}  
             >
               {item}
               <span className="neobar-underline" />
@@ -60,6 +61,10 @@ export default function NeoBar() {
                 whileHover={{ x: 8 }}
                 transition={{ type: "spring", stiffness: 200 }}
                 className="neobar-dropdown-item"
+                onClick={() => {
+                  onNavClick(item.toLowerCase()); // 🔹 added
+                  setOpen(false); // close dropdown after click
+                }}
               >
                 {item}
               </motion.li>

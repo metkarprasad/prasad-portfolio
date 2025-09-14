@@ -1,0 +1,132 @@
+.projects {
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+  padding: 100px 10%;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.projects-title span {
+  background: linear-gradient(90deg, #ff0080, #7928ca, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* ==== Project Card ==== */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.project-card:hover {
+  box-shadow: 0 15px 35px rgba(255, 0, 128, 0.3);
+}
+
+/* Project Image */
+.project-img {
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.project-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img img {
+  transform: scale(1.1);
+}
+
+/* Project Content */
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff0080;
+}
+
+.project-content p {
+  font-size: 15px;
+  color: #cccccc;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-stack span {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #00d2ff;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #ff0080;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 32px;
+  }
+  .project-content h3 {
+    font-size: 20px;
+  }
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  will-change: transform;
+}

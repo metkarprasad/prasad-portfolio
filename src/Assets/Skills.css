@@ -1,0 +1,139 @@
+.skills {
+  background: linear-gradient(180deg, #0d0d0d, #1c1c1c);
+  padding: 80px 10%;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.skills-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.skills-title span {
+  background: linear-gradient(90deg, #ff0080, #7928ca, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Progress Circle */
+.progress-ring {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 20px auto 0;
+}
+
+.circular-chart {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+.skill-level {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Hover effect like glow */
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 0, 128, 0.4);
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 32px;
+  }
+}
+/* Carousel */
+.skills-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
+}
+.skills-carousel::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.skill-card {
+  flex: 0 0 80%;
+  max-width: 350px;
+  scroll-snap-align: center;
+  margin: auto;
+}
+
+/* Extra Info */
+.skill-extra {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.skill-type {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* Animated bar */
+.skill-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #ff0080, #7928ca, #00d2ff);
+  border-radius: 5px;
+  margin-top: 12px;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.6);
+}

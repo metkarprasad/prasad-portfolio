@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 // import "./Home.css"; 
 import "../Assets/Home.css"
+import CodeAnimation from "../Componants/CodeAnimation";
 
 export default function Home() {
   return (
     <section className="home" id="home">
       {/* Animated Background Overlay */}
-      <div className="home-bg"></div>
+      <div className="home-bg"></div> 
+      <CodeAnimation/>
 
       <div className="home-content">
         {/* Greeting */}
