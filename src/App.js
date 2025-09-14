@@ -27,7 +27,7 @@ function App() {
         });
         return nextIndex;
       });
-    }, 2000); // 3 seconds
+    }, 4000); // 3 seconds
 
     return () => clearInterval(interval);
   }, [autoScroll]);
