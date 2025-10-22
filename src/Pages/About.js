@@ -36,7 +36,7 @@ export default function About() {
             className="img-glow"
           >
             <img 
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHvyiz_z36jMlEtUarIfsj6Q3ic-rCYPyw8yTh2IernSy0YvZnIPHw5l2-nxDuDhvV5f0&usqp=CAU" 
+              src="https://res.cloudinary.com/det3aoore/image/upload/v1761103202/Gemini_Generated_Image_jpi1erjpi1erjpi1_1_xvaj8g.png" 
               alt="Me" 
             />
           </motion.div>

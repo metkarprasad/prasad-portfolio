@@ -94,3 +94,19 @@
   font-weight: bold; 
   color: #00ffd1; 
 }
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .profiles-track {
+    display: flex;
+    flex-wrap: wrap;       /* allow cards to wrap */
+    justify-content: center;
+    animation: none !important; /* stop scroll */
+    transform: none !important; /* reset transform */
+  }
+
+  .profile-card {
+    flex: 0 0 90%;         /* almost full width on mobile */
+    margin-bottom: 20px;
+  }
+}
+
